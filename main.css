@@ -8,3 +8,28 @@ h1 {
     color: antiquewhite;
     font-family: 'Shadows Into Light', cursive;
 }
+
+#bioPage {
+    text-align: justify;
+}
+
+#card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: dotted 10px #FFEB3B;
+    border-radius: 10px 10px 10px 10px;
+    max-width: 29%;
+    margin: 50px 0;
+    padding: 0;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Arvo', serif;
+    background-color: #D1C4E9;
+  }
+
+  #projectsPage img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px 10px 10px 10px;
+    width: 90%;
+  }

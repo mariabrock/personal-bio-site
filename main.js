@@ -3,7 +3,7 @@ console.log("this will be my site");
 const projects = [
     {
         title: "Cool Project", 
-        screenshot: "http://gotoflashgames.com/files/file/033.jpg", 
+        screenshot: "https://carloselopez.files.wordpress.com/2015/03/project-management.jpg", 
         description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
         technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
         available: true,
@@ -13,7 +13,7 @@ const projects = [
 
     {
         title: "Cool Project", 
-        screenshot: "http://gotoflashgames.com/files/file/033.jpg", 
+        screenshot: "https://carloselopez.files.wordpress.com/2015/03/project-management.jpg", 
         description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
         technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
         available: false,
@@ -28,35 +28,21 @@ const printToDOM = (toPrint, divId) => {
 
 const createProjectsCards = (projectArray) => {
     let domString = ''
-    for (let i = 0; i < procjectArray.length; i++) {
+    for (let i = 0; i < projectArray.length; i++) {
         const projectCard = projectArray[i];
-        domString += `
-        <div id="">
-            <h2 id="">${petCard.name}</h2>
-            <img src="${petCard.imageUrl}" alt="Image of ${petCard.name}" />
-            <p>Color: ${petCard.color}</p>
-            <p>Special Skill: ${petCard.specialSkill}</p>
-            <h2 id="">${petCard.type}</h2>
+        if (projectCard.available) {domString += `
+        <div id="card">
+            <h2 id="title">${projectCard.title}</h2>
+            <img src="${projectCard.screenshot}" alt="Image of ${projectCard.title}" />
+            <p>${projectCard.description}</p>
+            <p>${projectCard.technologiesUsed}</p>
+            <p id="linkToProject">${projectCard.url}</p>
         </div>
         `;
+        }
     }
     printToDOM(domString, 'projectsPage');
   };
 
-const buttonClick = (e) => {
-    const petType = e.target.id;
-    const selectedPets = [];
-    for (let i = 0; i < petSelector.length; i++) {
-        const thisPet = petSelector[i];
-        if (thisPet.type === petType) {
-            selectedPets.push(thisPet);
-        }
-    }
-    if (petType === '') {
-        petBuilder(petSelector);
-    } else {
-        petBuilder(selectedPets);
-    }
-}
 
-  document.getElementById('').addEventListener('click', buttonClick)
+createProjectsCards(projects);
