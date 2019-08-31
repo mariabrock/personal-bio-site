@@ -7,15 +7,24 @@ body {
 h1 {
     color: antiquewhite;
     font-family: 'Shadows Into Light', cursive;
+    font-size: 40px;
 }
 
 #bioPage {
     text-align: justify;
 }
 
+#projectsPage {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: auto;
+  }
+
 #card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border: dotted 10px #FFEB3B;
+    border: solid 10px #9E9E9E;
     border-radius: 10px 10px 10px 10px;
     max-width: 29%;
     margin: 50px 0;
@@ -23,7 +32,7 @@ h1 {
     text-align: center;
     font-size: 16px;
     font-family: 'Arvo', serif;
-    background-color: #D1C4E9;
+    background-color: #009688;
   }
 
   #projectsPage img {
@@ -32,4 +41,12 @@ h1 {
     margin-right: auto;
     border-radius: 10px 10px 10px 10px;
     width: 90%;
+  }
+
+  .page-footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: auto
   }
