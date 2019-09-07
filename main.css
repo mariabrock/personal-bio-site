@@ -1,35 +1,58 @@
 body {
-    background-color: #00796B;
-    color: antiquewhite;
-    font-family: 'Arvo', serif;
+  background-color: #00796B;
+  color: antiquewhite;
+  font-family: 'Arvo', serif;
 }
 
-h1 {
-    color: antiquewhite;
-    font-family: 'Shadows Into Light', cursive;
+#navbar {
+  color: antiquewhite;
+  font-family: 'Shadows Into Light', cursive;
 }
 
 #bioPage {
-    text-align: justify;
+  text-align: justify;
+}
+
+#projectsPage {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin: auto;
+  padding: auto;
 }
 
 #card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border: dotted 10px #FFEB3B;
-    border-radius: 10px 10px 10px 10px;
-    max-width: 29%;
-    margin: 50px 0;
-    padding: 0;
-    text-align: center;
-    font-size: 16px;
-    font-family: 'Arvo', serif;
-    background-color: #D1C4E9;
-  }
+  display: block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: solid 10px #9E9E9E;
+  border-radius: 10px 10px 10px 10px;
+  max-width: 29%;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Arvo', serif;
+  background-color: #009688;
+}
 
-  #projectsPage img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px 10px 10px 10px;
-    width: 90%;
-  }
+#projectsPage img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px 10px 10px 10px;
+  width: 90%;
+}
+
+.page-footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin: auto;
+  padding: auto
+}
+  
+.navbar-brand {
+  text-size-adjust: 2em;
+  color: antiquewhite;
+  font-family: 'Shadows Into Light', cursive;
+}  
