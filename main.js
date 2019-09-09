@@ -56,7 +56,7 @@ const getBio = () => {
                 
             <p>I love a good challenge. Programming appeals to me because it combines so many things I love (and that I'm good at!). Each different language is a new opportunity to learn, and each new project puzzle is a chance to step outside my comfort zone!</p>
     </div>`
-    printToDOM(domString, 'bioPage')
+    printToDOM(domString, '#bioPage')
   };
 
 const buttonClick = (e) =>{
@@ -65,6 +65,46 @@ const buttonClick = (e) =>{
         getBio()
     };
 
+document.getElementById('home').addEventListener('click', buttonClick);
 document.getElementById('bio').addEventListener('click', buttonClick);
 document.getElementById('tech').addEventListener('click', buttonClick);
 document.getElementById('projects').addEventListener('click', buttonClick);
+
+//this is the js for the SPA!
+const app = {
+    pages: [],
+    show: new Event('show'),
+    init: function(){
+        app.pages = document.querySelectorAll('.fullPage');
+        app.pages.forEach((pg)=>{
+            pg.addEventListener('show', app.pageShown);
+        })
+        
+        document.querySelectorAll('.nav-link').forEach((link)=>{
+            link.addEventListener('click', app.nav);
+        })
+        history.replaceState({}, 'Home', '#homePage');
+        window.addEventListener('popstate', app.poppin);
+    },
+    nav: function(ev){
+        ev.preventDefault();
+        let currentPage = ev.target.getAttribute('id');
+        document.querySelector('.active').classList.remove('active');
+        document.getElementById(currentPage).classList.add('active');
+        console.log(currentPage)
+        history.pushState({}, currentPage, `#${currentPage}`);
+        document.getElementById(currentPage).dispatchEvent(app.show);
+    },
+    
+    poppin: function(ev){
+        console.log(location.hash, 'popstate event');
+        let hash = location.hash.replace('#' ,'');
+        document.querySelector('.active').classList.remove('active');
+        document.getElementById(hash).classList.add('active');
+        console.log(hash)
+        //history.pushState({}, currentPage, `#${currentPage}`);
+        document.getElementById(hash).dispatchEvent(app.show);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', app.init);
