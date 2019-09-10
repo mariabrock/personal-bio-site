@@ -44,8 +44,17 @@ const createProjectsCards = (projectArray) => {
     printToDOM(domString, 'projectsPage');
   };
 
-
-
+  const getTech = () => {
+    let domString = `  
+        <ul>
+            <li>Adobe Photoshop</li>
+            <li>Adobe Illustrator</li>
+            <li>Adobe InDesign</li>
+            <li>HTML/CSS/JavaScript</li>
+        </ul>`;
+        printToDOM(domString, 'technologiesPage')
+  }
+        
 const getBio = () => {
     let domString = `
             <p>Hi. My name's Maria. I'm a programmer and graphic designer who has a flair for anything handmade. If it's from space, I think it's cool. If you offer me coffee, you'll be my new best friend.</p> 
