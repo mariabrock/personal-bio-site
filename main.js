@@ -72,11 +72,16 @@ const buttonClick = (e) =>{
             getBio();
             document.getElementById('homePage').innerHTML = '';
             document.getElementById('technologiesPage').innerHTML = '';
-            document.getElementById('project0sPage').innerHTML = '';
+            document.getElementById('projectsPage').innerHTML = '';
         } else if (buttonType === 'projects') {
             createProjectsCards(projects);
             document.getElementById('homePage').innerHTML = '';
             document.getElementById('technologiesPage').innerHTML = '';
+            document.getElementById('bioPage').innerHTML = '';
+        } else if (buttonType === 'tech') {
+            getTech();
+            document.getElementById('homePage').innerHTML = '';
+            document.getElementById('projectsPage').innerHTML = '';
             document.getElementById('bioPage').innerHTML = '';
         }
     };
