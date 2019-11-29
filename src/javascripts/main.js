@@ -2,32 +2,6 @@ import 'bootstrap';
 
 console.log('this will be my site');
 
-const projects = [
-  {
-    title: 'Cool Project',
-    screenshot: 'https://carloselopez.files.wordpress.com/2015/03/project-management.jpg',
-    description: 'This is the best project',
-    technologiesUsed: 'HTML, CSS, Vanilla JavaScript, Version Control with Github',
-    available: true,
-    url: 'https://github.com/mariabrock',
-    githubUrl: 'https://github.com/mariabrock',
-  },
-
-  {
-    title: 'Cool Project',
-    screenshot: 'https://carloselopez.files.wordpress.com/2015/03/project-management.jpg',
-    description: 'This is the best project',
-    technologiesUsed: 'HTML, CSS, Vanilla JavaScript, Version Control with Github',
-    available: true,
-    url: 'https://github.com/mariabrock', 
-    githubUrl: 'https://github.com/mariabrock',
-  },
-];
-
-const printToDOM = (toPrint, divId) => {
-  document.getElementById(divId).innerHTML = toPrint;
-};
-
 const createProjectsCards = (projectArray) => {
   let domString = '';
   for (let i = 0; i < projectArray.length; i+=) {
