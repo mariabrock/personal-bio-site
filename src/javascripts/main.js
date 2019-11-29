@@ -1,5 +1,7 @@
 import 'bootstrap';
 
+import utilities from '../javascripts/helpers/utilities';
+
 console.log('this will be my site');
 
 const createProjectsCards = (projectArray) => {
@@ -18,7 +20,7 @@ const createProjectsCards = (projectArray) => {
         `;
     }
   }
-  printToDOM(domString, 'projectsPage');
+  utilities.printToDOM(domString, 'projectsPage');
 };
 
 
